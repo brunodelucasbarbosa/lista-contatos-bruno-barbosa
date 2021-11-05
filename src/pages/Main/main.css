@@ -1,0 +1,132 @@
+.tela-login, .tela-cadastro {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+.imagemEsquerda {
+  height: 100%;
+}
+
+.aside-esquerda {
+  background: url('../../assets/Imagem-Esquerda.png');
+  background-size: cover;
+  height: 100vh;
+  width: 50vw;
+  margin-right: 2rem;
+}
+
+.aside-direita {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  width: 50vw;
+}
+
+.bem-vindo {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 19px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.title-login {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 37px;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+input {
+  background: #FDFAFA;
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  padding: 16px;
+  width: 60%;
+  
+}
+
+::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 19px;
+  color: #968B8B;
+}
+
+.button-login, .button-cancelar {
+  border: none;
+  width: 60%;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.button-cancelar {
+  background: rgba(251, 6, 21, 0.65);
+}
+
+.button-login {
+  background: #04C45C;
+}
+
+.rota-cadastrar, .rota-login {
+  display: flex;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 19px;
+  color: #000000;
+  margin-top: 9.6rem;
+}
+
+
+.toast-error {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .aside-esquerda {
+    display: none;
+  }
+
+  .tela-login, .tela-cadastro  {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .tela-login, .tela-cadastro  {
+    border: 0.7rem solid black;
+  }
+
+  .button-login, .button-cancelar, input {
+    width: 100%;
+  }
+}
+

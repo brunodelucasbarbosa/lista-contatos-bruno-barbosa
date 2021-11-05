@@ -1,0 +1,18 @@
+.span-modal-excluir {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+}
+
+.container-excluir {
+  text-align: center;
+}
+
+.color-name {
+  font-weight: bold;
+  color: #5999C0;
+}

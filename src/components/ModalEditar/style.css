@@ -1,0 +1,89 @@
+.modal-open {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  border: 1px solid black;
+}
+
+.container-modal {
+  border-radius: 8px;
+  background-color: white;
+  padding: 5rem;
+  width: 50vw;
+  height: auto;
+}
+
+.icone-close-modal {
+  position: relative;
+  left: 100%;
+  bottom: 5%;
+  cursor: pointer;
+}
+
+.title-modal {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.input-modal {
+  background: #FDFAFA;
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+}
+
+.button-modal {
+  border: none;
+  padding: 1.6rem;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 19px;
+  text-align: center;
+  color: #FFF7F7;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.adicionar {
+  margin-top: 3.2rem;
+  background-color: #04C45C;
+}
+
+.limpar {
+  background: rgba(251, 6, 21, 0.65);
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .container-modal {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-modal {
+    width: 40vw;
+  }
+}
