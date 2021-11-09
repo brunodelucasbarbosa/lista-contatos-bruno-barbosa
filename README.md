@@ -1,5 +1,5 @@
 # Lista de contatos com ReactJS
-## Por: [Bruno de Lucas @brunobarbosas](https://github.com/brunobarbosa17)
+## Por: [Bruno de Lucas @brunobarbosa17](https://github.com/brunobarbosa17)
 
 ##### Neste sistema utilizei ReactJS, pude consolidar conceitos de Rotas, Responsividade, ContextAPI e em breve Refatoração 😝
 ##### É possível fazer :
