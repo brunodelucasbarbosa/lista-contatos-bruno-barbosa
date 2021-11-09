@@ -7,7 +7,6 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  useHistory,
   Redirect,
   Link
 } from 'react-router-dom'
@@ -30,7 +29,6 @@ function useUserProvider() {
 
   const [token, setToken, removeToken] = useLocalStorage('token', '');
 
-  const history = useHistory();
 
   async function listarContatos() {
     try {
@@ -138,7 +136,6 @@ function useUserProvider() {
         telefone: telefoneModal,
         email: emailModal
       };
-      console.log(dados)
       const promise = await fetch('https://cubos-api-contacts.herokuapp.com/contatos', {
         method: 'POST',
         headers: {
@@ -147,7 +144,6 @@ function useUserProvider() {
         },
         body: JSON.stringify(dados)
       });
-      console.log(promise)
       if (promise.status !== 200) {
         toast.warn(`Erro ao cadastrar contato!`, {
           position: "top-right",
@@ -201,20 +197,20 @@ function useUserProvider() {
       });
       return;
     }
-    const {id} = contatoEditar;
+    const { id } = contatoEditar;
     try {
       const dados = {
         nome: nomeModal,
         telefone: telefoneModal,
         email: emailModal
-      };  
-      const response = await fetch(`https://cubos-api-contacts.herokuapp.com/contatos/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(dados),
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
+      };
+      const response = await fetch(`https://cubos-api-contacts.herokuapp.com/contatos/${ id }`, {
+        method: 'PUT',
+        body: JSON.stringify(dados),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${ token }`
+        },
       });
 
       if (response.status !== 200) {
@@ -230,16 +226,16 @@ function useUserProvider() {
         return;
       }
 
-    toast.success('Contato editado com sucesso!', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-    });
-    setModalEditarOpen(false);
+      toast.success('Contato editado com sucesso!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
+      setModalEditarOpen(false);
     } catch (err) {
       console.log(err.message)
     }
@@ -296,16 +292,16 @@ function useUserProvider() {
 
   async function handleExcluirContato(e) {
     e.preventDefault();
-    const {id} = contatoEditar;
+    const { id } = contatoEditar;
     try {
-      const promise = await fetch(`https://cubos-api-contacts.herokuapp.com/contatos/${id}`, {
+      const promise = await fetch(`https://cubos-api-contacts.herokuapp.com/contatos/${ id }`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${ token }`
         }
       });
-      if(promise.status !== 200) {
+      if (promise.status !== 200) {
         toast.warn(`Erro ao excluir contato!`, {
           position: "top-right",
           autoClose: 2000,

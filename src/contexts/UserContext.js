@@ -14,17 +14,3 @@ export function UserProvider(props) {
 };
 
 export default UserContext;
-
-
-
-/*
-toast.error('Usuário não encontrado!', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        });
-        */
